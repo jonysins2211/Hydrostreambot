@@ -1,391 +1,203 @@
-<!-- this code is written by @biisal tg:biisal-files  -->
-
-<!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.instead  -->
-
-
-
-
-
 <!DOCTYPE html>
-
 <html lang="en">
-
-
-
 <head>
-
     <meta charset="UTF-8">
-
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/HydroStreamerBot/live.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>{{file_name}}</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-
-    <link rel="stylesheet" href="https://batmanbehindthedark.github.io/StreamCSS.css">
-
-    <link rel="stylesheet" href="https://aeditx03.github.io/resources/playerCss.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-
-
+    <title>%s</title>
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/HydroStreamerBot/Thunder.jpg" type="image/jpeg">
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- External Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/FileToLink/reqStyle.css" rel="stylesheet">
 </head>
-
-<!-- this code is written by @biisal tg:biisal-files  -->
-
-<!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.instead  -->
-
-
-
 <body>
-
-    <nav>
-
-        <div class="nleft">
-
-            <a href="https://t.me/MOVIE_LOVERZZ">
-
-                <!-- if u are trying to change the header name please remove the title text from bottom line  -->
-
-                <h4 id="heading" style="z-index: 100;" class="magnet">MOVIE LOVERZ</h4>
-
-            </a>
-
-        </div>
-
-        <div class="nryt">
-
-            <a class="home-btn magnet" href="#main" onclick="toggleWidthnav(this)">HOME</a>
-
-
-
-            <a href="#sec1" class="about-btn magnet" onclick="toggleWidthnav(this)">ABOUT</a>
-
-        </div>
-
-    </nav>
-
-    <center>
-
-        <div class="about-nav">
-
-            <a href="#sec1" class="wlcm magnet" onclick="toggleWidth(this)">WELCOME</a>
-
-            <a href="#sec2" class="abt-chnl magnet" onclick="toggleWidth(this)">CHANNELS</a>
-
-            <a href="#sec3" class="magnet bot-btn" onclick="toggleWidth(this) , bot_btn_clicked()">BOTS</a>
-
-            <a href="#sec4" class="magnet contact-btn" onclick="toggleWidth(this)">LET'S TALK</a>
-
-        </div>
-
-    </center>
-
-    <!-- this code is written by @biisal tg:biisal-files  -->
-
-    <!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.instead  -->
-
-
-
-    <div class="outer">
-
-        <div class="inner">
-
-            <div class="main" id="main">
-
-                <video id="player" class="player" src="{{file_url}}" type="video/mp4" playsinline controls
-
-                    width="100%"></video>
-
-                <div class="player"></div>
-
-                <div class="file-name">
-
-                    <h4>File name : </h4>
-
-                    <br>
-
-                    <p id="myDiv">{{file_name}}</p>
-
-                </div>
-
-                <div class="downloadBtn">
-
-                    <!--<button class="magnet" onclick="vlc_player()"><img src="https://i.postimg.cc/15TQ4y7B/vlc.png"
-
-                            alt="">watch in VLC PLAYER</button>-->
-
-                    <button class="magnet" onclick="mx_player()"><img src="https://i.postimg.cc/sx4Msv4T/mx.png"
-
-                            alt="">watch in MX PLAYER</button>
-
-                    <button class="magnet" onclick="playit_player()"><img src="https://i.postimg.cc/RVGWYJFF/playit.png"
-
-                            alt="">watch in PLAYit
-
-                        PLAYER</button>
-
-                    <button class="magnet" onclick="km_player()"><img src="https://i.postimg.cc/wT9tFQ9Z/km.png"
-
-                            alt="">watch in KM PLAYER</button>
-
-                    <button class="magnet" onclick="s_player()"><img src="https://i.postimg.cc/XYJr6NGg/s.png"
-
-                            alt="">watch in S PLAYER</button>
-
-                    <button class="magnet" onclick="hd_player()"><img src="https://i.postimg.cc/rFT43LNh/hd.png"
-
-                            alt="">watch in HD
-
-                        PLAYER(4K)</button>
-
-                    <button class="magnet" onclick="bisalDownload()"><img style="height: 35px;"
-
-                            src="https://i.postimg.cc/Zncc9YLq/Pngtree-download-icon-3581467.png" alt="">download video
-
-                    </button>
-
-                </div>
-
-
-
-            </div>
-
-            <div class="abt">
-
-                <div class="about">
-
-                    <div class="about-dets">
-
-                        <div class="abt-sec" id="sec1" style="padding: 160px 30px;">
-
-                            <h1 style="text-align: center;">HEY MOVIE LOVERZ USERS WELCOME TO OUR                  <Span>STREAMING WEBSITE</Span></h1>
-
-                            <p style="text-align: center; line-height: 2;word-spacing: 2px;  letter-spacing: 0.8px;">
-
-                                We're
-
-                                thrilled to have <span>you</span> here.
-
-                                Get ready for an
-
-                                amazing <span>experience</span>
-
-                                filled with <span>entertainment</span>, <span>fun</span>, and <span>surprises</span>.
-
-                                Grab
-
-                                your snacks, sit back, and <span>enjoy</span> the show !
-
-                            </p>
-
-                        </div>
-
-                        <div class="abt-sec" id="sec2">
-
-                            <h1>OUR ALL <span>CHANNELS</span> LIST</h1>
-
-                            <div class="links chnl-link">
-
-                                <a class="magnet" href="https://t.me/MOVIE_LOVERZZ"><button>MAIN CHANNEL
-
-                                        </button></a>
-
-                                <a class="magnet" href="https://t.me/+b9o1yJuKE8U0NjA9"><button>NEW MOVIES(ONLY FILES) 
-
-                                        </button></a>
-
-                                <a class="magnet" href="https://t.me/Movie_loverz_file_bot"><button>MOVIES SEARCH 
-
-                                        BOT</button></a>
-
-                                <a class="magnet" href="https://t.me/+ntGBpf8UhmFkNmQ1"><button>MOVIE REQUEST 
-
-                                        GROUP</button></a>
-
-                               <!-- <a class="magnet" href="https://t.me/Punjabi_movies_villa"><button>HP REQUEST 
-
-                                        LOGS</button></a>-->
-
-                            </div>
-
-                        </div>
-
-                        <div class="abt-sec" id="sec3">
-
-                            <h1>OUR ALL <span>BOTS</span> LIST</h1>
-
-                            <div class="links bot-link">
-
-                                <a class="magnet" href="https://t.me/MOVIE_LOVERZZ"><button>MOVIE LOVERZ</button></a>
-
-                            </div>
-
-                        </div>
-
-                        <div class="abt-sec" id="sec4">
-
-                            <!-- this code is written by @biisal tg:biisal-files  -->
-
-                            <!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.instead  -->
-
-
-
-                            <p style="text-align: center;">YOU CAN <Span>TALK</Span> WITH US FOR YOUR <Span>SUPPORT</Span> AND YOU CAN <Span>REPORT</Span> THROUGH
-
-                                TELEGRAM</p>
-
-                            <div class="links contact">
-
-                                <a href="https://t.me/MLadminbot"><button>CONTACT US</button></a>
-
-                            </div>
-
-                        </div>
-
+    <!-- Light Mode Toggle -->
+    <button class="toggle-dark-mode" onclick="toggleDarkMode()" aria-label="Toggle Light/Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    <div class="wrapper">
+        <div class="container">
+            <header>
+                <h1 id="file-name">%s</h1>
+            </header>
+            <main>
+                <div class="player-container">
+                    <div class="video-wrapper">
+                        <video class="plyr" controls poster="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/HydroStreamerBot/videobg.jpg" loading="lazy">
+                            <source src="%s" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
-
                 </div>
-
-            </div>
-
+                <p class="unsupported-message">⚠️ If the video isn't playing, it might not be supported in the browser. Try in a video player.</p>
+                <div class="controls">
+                    <button class="btn stream" onclick="toggleDropdown(event)" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-play-circle"></i> Stream
+                    </button>
+                    <button class="btn download" onclick="download()">
+                        <i class="fas fa-cloud-download-alt"></i> Download
+                    </button>
+                    <button class="btn copy-link" onclick="copyLink()">
+                        <i class="fas fa-link"></i> Copy Link
+                    </button>
+                </div>
+            </main>
         </div>
+    </div>
 
-        <footer>
+    <!-- Dropdown Menu -->
+    <div class="dropdown-content" id="dropdown-menu" role="menu" aria-hidden="true">
+        <a href="#" onclick="playOnline('vlc')" role="menuitem" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/HydroStreamerBot/vlc.png" alt="VLC Mobile" class="player-logo" loading="lazy"> VLC Mobile
+        </a>
+        <a href="#" onclick="playOnline('mxp')" role="menuitem" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/HydroStreamerBot/mx.png" alt="MX Player Pro" class="player-logo" loading="lazy"> MX Player Pro
+        </a>
+        <a href="#" onclick="playOnline('mx')" role="menuitem" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/HydroStreamerBot/mx.png" alt="MX Player" class="player-logo" loading="lazy"> MX Player
+        </a>
+        <a href="#" onclick="playOnline('np')" role="menuitem" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/HydroStreamerBot/nPlayer.webp" alt="nPlayer" class="player-logo" loading="lazy"> nPlayer
+        </a>
+        <a href="#" onclick="playOnline('sp')" role="menuitem" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/HydroStreamerBot/splayer.webp" alt="S Player" class="player-logo" loading="lazy"> S Player
+        </a>
+        <a href="#" onclick="playOnline('km')" role="menuitem" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/HydroStreamerBot/km.webp" alt="KM Player" class="player-logo" loading="lazy"> KM Player
+        </a>
+    </div>
 
-            <div class="mid">
+    <footer>
+        <div class="footer-links">
+            <a href="https://telegram.me/TeamShoGuN" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-telegram-plane"></i> Join our Telegram channel
+            </a>
+            <a href="https://github.com/fyaz05/FileToLink" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </footer>
 
-                <h1 class="mid-text">VISIT <a href="#sec3" onclick="bot_btn_clicked()"><span>OUR BOT</span></a>
-
-                    FOR
-
-                    MORE
-
-                    INFO</h1>
-
-            </div>
-
-
-
-            <div class="last-text">
-
-                <p class="text-center pb-20 pr-6 pl-6 absolute" style="font-weight: 500;">
-
-                    Welcome to our online streaming platform! Our website allows users to generate streamable links for
-
-                    various files using Telegram bot. Please note that we are not responsible for the content shared or
-
-                    streamed through our service. Users are encouraged to respect copyright laws and adhere to our
-
-                    community
-
-                    guidelines. Enjoy easy, hassle-free file streaming service.
-
-                </p>
-
-            </div>
-
-
-
-            <!-- this code is written by @biisal tg:biisal-files  -->
-
-            <!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.instead  -->
-
-
-
-
-
-
-
-            <div class="copyright ">
-
-                <h5 class="text-center">Copyright © 2025 <a href="https://t.me/MOVIE_LOVERZZ"><span
-
-                            style="font-weight: 700;">MOVIE LOVERZ</span></a>. All
-
-                    Rights Reserved.</h5>
-
-               <!-- <div class="icons">
-
-                    <a href="https://github.com/ROYAL-JATT"><i class="fa-brands fa-github fa-lg"></i></a>
-
-                    <a href="https://t.me/Punjabi_movies_villa"><i class="fa-brands fa-telegram fa-lg"></i></a>
-
-                </div>-->
-
-                <h4 style="font-weight: 700;">This Page Is Designed By <a
-
-                        href="https://t.me/MOVIE_LOVERZZ"><span>MOVIE LOVERZZ</span></a></h4>
-
-            </div>
-
-        </footer>
-
-</body>
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
-
-<script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-        const uncopyableElement = document.querySelector(".uncopyable");
-
-
-
-        uncopyableElement.addEventListener("selectstart", function (event) {
-
-            event.preventDefault();
-
+    <!-- Plyr JS -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js" defer></script>
+    <!-- Optimized Scripts -->
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoElement = document.querySelector('.plyr');
+            new Plyr(videoElement);
         });
 
-    });
+        const currentUrl = window.location.href;
+        const finalUrl = currentUrl.replace("/watch/", "/");
 
-</script>
+        function playOnline(player) {
+            const playerUrls = {
+                vlc: `vlc://${finalUrl}`,
+                mxp: `intent:${finalUrl}#Intent;package=com.mxtech.videoplayer.pro;end`,
+                mx: `intent:${finalUrl}#Intent;package=com.mxtech.videoplayer.ad;end`,
+                np: `nplayer-${finalUrl}`,
+                sp: `intent:${finalUrl}#Intent;action=com.young.simple.player.playback_online;package=com.young.simple.player;end`,
+                km: `intent:${finalUrl}#Intent;package=com.kmplayer;end`
+            };
+            window.location.href = playerUrls[player] || finalUrl;
 
-<script src="js/wow.min.js"></script>
+            // Close the dropdown menu
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            dropdownMenu.classList.remove('show');
+            const dropdownButton = document.querySelector('.btn.stream');
+            if (dropdownButton) {
+                dropdownButton.setAttribute('aria-expanded', 'false');
+            }
+            dropdownMenu.setAttribute('aria-hidden', 'true');
+        }
 
-<script>
+        function download() {
+            window.location.href = finalUrl;
+        }
 
-    new WOW().init();
+        function copyLink() {
+            navigator.clipboard.writeText(finalUrl)
+                .then(() => {
+                    showFeedback("📋 Link copied to clipboard!");
+                })
+                .catch(err => console.error('Could not copy text: ', err));
+        }
 
-</script>
+        function showFeedback(message) {
+            const feedback = document.createElement('div');
+            feedback.className = 'feedback';
+            feedback.textContent = message;
+            feedback.setAttribute("role", "alert");
+            document.body.appendChild(feedback);
+            // Trigger reflow to enable transition
+            void feedback.offsetWidth;
+            feedback.style.opacity = '1';
+            feedback.style.transform = 'translateY(0)';
+            setTimeout(() => {
+                feedback.style.opacity = '0';
+                feedback.style.transform = 'translateY(20px)';
+                setTimeout(() => feedback.remove(), 500);
+            }, 3000);
+        }
 
-<script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
+        function toggleDropdown(event) {
+            event.stopPropagation();
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            const button = event.currentTarget;
+            const rect = button.getBoundingClientRect();
 
-<script src="https://aeditx03.github.io/resources/StreamJs.js"></script>
+            // Position the dropdown menu below the button
+            dropdownMenu.style.left = `${rect.left + window.scrollX}px`;
+            dropdownMenu.style.top = `${rect.bottom + window.scrollY}px`;
 
+            // Toggle the 'show' class
+            const isShown = dropdownMenu.classList.toggle('show');
 
+            // Update ARIA attributes
+            button.setAttribute('aria-expanded', isShown);
+            dropdownMenu.setAttribute('aria-hidden', !isShown);
+        }
 
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            const streamButton = document.querySelector('.btn.stream');
+            if (!dropdownMenu.contains(event.target) && !streamButton.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+                streamButton.setAttribute('aria-expanded', 'false');
+                dropdownMenu.setAttribute('aria-hidden', 'true');
+            }
+        });
+
+        // Keyboard accessibility for dropdown items
+        const dropdownLinks = document.querySelectorAll('#dropdown-menu a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    link.click();
+                }
+            });
+        });
+
+        // Toggle Dark/Light Mode
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('light-mode');
+            const toggleButtonIcon = document.querySelector('.toggle-dark-mode i');
+            if (document.documentElement.classList.contains('light-mode')) {
+                toggleButtonIcon.classList.remove('fa-moon');
+                toggleButtonIcon.classList.add('fa-sun');
+            } else {
+                toggleButtonIcon.classList.remove('fa-sun');
+                toggleButtonIcon.classList.add('fa-moon');
+            }
+        }
+    </script>
+</body>
 </html>
-
-
-
-<!-- this code is written by @biisal tg:biisal-files  -->
-
-<!-- stealing credit doesn't make you developer..so try to give full credit to the developer 😊 u will not loose anything for giving proper credit.instead  -->
