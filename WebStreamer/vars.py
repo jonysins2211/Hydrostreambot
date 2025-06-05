@@ -8,13 +8,13 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(environ.get("API_ID"))
-    API_HASH = str(environ.get("API_HASH"))
+    API_ID = int(environ.get("API_ID", "27258953"))
+    API_HASH = str(environ.get("API_HASH", "0add43fc460daca0a86077989cfc414f"))
     BOT_TOKEN = str(environ.get("BOT_TOKEN"))
     SLEEP_THRESHOLD = int(environ.get("SLEEP_THRESHOLD", "60"))  # 1 minte
-    WORKERS = int(environ.get("WORKERS", "6"))  # 6 workers = 6 commands at once
+    WORKERS = int(environ.get("WORKERS", "7"))  # 6 workers = 6 commands at once
     BIN_CHANNEL = int(
-        environ.get("BIN_CHANNEL")
+        environ.get("BIN_CHANNEL", "-1002005906539")
     )  # you NEED to use a CHANNEL when you're using MULTI_CLIENT
     PORT = int(environ.get("PORT", 8080))
     BIND_ADDRESS = str(environ.get("WEB_SERVER_BIND_ADDRESS", "0.0.0.0"))
@@ -26,16 +26,16 @@ class Var(object):
             "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
         )
 
-    DATABASE_URL = str(environ.get('DATABASE_URL'))
-    UPDATES_CHANNEL = str(environ.get('UPDATES_CHANNEL', "Telegram"))
-    OWNER_ID = int(environ.get('OWNER_ID'))
-    SESSION_NAME = str(environ.get('SESSION_NAME', 'hydroBot'))
-    FORCE_UPDATES_CHANNEL = environ.get('FORCE_UPDATES_CHANNEL', False)
+    DATABASE_URL = str(environ.get('DATABASE_URL', 'mongodb+srv://primebaby11220:TuGa0I5ZsiC8mp5A@cluster0.df4rivj.mongodb.net/?retryWrites=true&w=majorit'))
+    UPDATES_CHANNEL = str(environ.get('UPDATES_CHANNEL', "MovieEntertainment4u"))
+    OWNER_ID = int(environ.get('OWNER_ID', '949657126'))
+    SESSION_NAME = str(environ.get('SESSION_NAME', 'MLFILETOLINKBOT'))
+    FORCE_UPDATES_CHANNEL = environ.get('FORCE_UPDATES_CHANNEL', True)
     FORCE_UPDATES_CHANNEL = True if str(FORCE_UPDATES_CHANNEL).lower() == "true" else False
     ALLOWED_USERS = [x.strip("@ ") for x in str(environ.get("ALLOWED_USERS") or "").split(",") if x.strip("@ ")]
 
-    KEEP_ALIVE = str(environ.get("KEEP_ALIVE", "0").lower()) in  ("1", "true", "t", "yes", "y")
-    IMAGE_FILEID = environ.get('IMAGE_FILEID', "https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/HydroStreamerBot/My%20Files.jpeg")
+    KEEP_ALIVE = str(environ.get("KEEP_ALIVE", "1").lower()) in  ("1", "true", "t", "yes", "y")
+    IMAGE_FILEID = environ.get('IMAGE_FILEID', "https://graph.org/file/a319f6b9ce3b993c6e22f.jpg")
     TOS = environ.get("TOS", None)
     if TOS:
         response = request.urlopen(TOS)
