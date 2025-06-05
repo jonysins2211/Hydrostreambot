@@ -29,7 +29,7 @@ class Var(object):
     DATABASE_URL = str(environ.get('DATABASE_URL', 'mongodb+srv://batmann:saBVJFEqhb3rk5KQ@cluster0.az5fg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'))
     UPDATES_CHANNEL = str(environ.get('UPDATES_CHANNEL', "MovieEntertainment4u"))
     OWNER_ID = int(environ.get('OWNER_ID', '949657126'))
-    SESSION_NAME = str(environ.get('SESSION_NAME', 'mlfiletolinkbot'))
+    SESSION_NAME = str(environ.get('SESSION_NAME', 'Mlfiletolinkbot'))
     FORCE_UPDATES_CHANNEL = environ.get('FORCE_UPDATES_CHANNEL', True)
     FORCE_UPDATES_CHANNEL = True if str(FORCE_UPDATES_CHANNEL).lower() == "true" else False
     ALLOWED_USERS = [x.strip("@ ") for x in str(environ.get("ALLOWED_USERS") or "").split(",") if x.strip("@ ")]
