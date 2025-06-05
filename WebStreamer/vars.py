@@ -26,7 +26,7 @@ class Var(object):
             "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
         )
 
-    DATABASE_URL = str(environ.get('DATABASE_URL', 'mongodb+srv://primebaby11220:TuGa0I5ZsiC8mp5A@cluster0.df4rivj.mongodb.net/?retryWrites=true&w=majorit'))
+    DATABASE_URL = str(environ.get('DATABASE_URL', 'mongodb+srv://batmann:saBVJFEqhb3rk5KQ@cluster0.az5fg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'))
     UPDATES_CHANNEL = str(environ.get('UPDATES_CHANNEL', "MovieEntertainment4u"))
     OWNER_ID = int(environ.get('OWNER_ID', '949657126'))
     SESSION_NAME = str(environ.get('SESSION_NAME', 'Mlfiletolinkbot'))
