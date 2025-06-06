@@ -22,7 +22,7 @@ class Var(object):
     HAS_SSL = str(environ.get("HAS_SSL", "1").lower()) in ("1", "true", "t", "yes", "y")
     NO_PORT = str(environ.get("NO_PORT", "0").lower()) in ("1", "true", "t", "yes", "y")
     FQDN = str(environ.get("FQDN", BIND_ADDRESS))
-    URL = "https://movie-loverzz2-1c5653e626a6.herokuapp.com/".format(
+    URL = "https://a-loki-bot2-b9b930b68654.herokuapp.com/".format(
             "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
         )
 
